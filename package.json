@@ -1,0 +1,18 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "Project gulp sass html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "gulp"
+  ],
+  "author": "nancy s",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}
