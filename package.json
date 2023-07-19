@@ -13,6 +13,7 @@
   "author": "nancy s",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^4.0.2",
     "sass": "^1.63.6"
   }
 }
