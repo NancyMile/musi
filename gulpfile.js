@@ -2,7 +2,7 @@ const { src, dest, watch} = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 
 function css(done) {
-    src('src/scss/app.scss') //find sass file
+    src('src/scss/**/*.scss') //find sass file
         .pipe(sass()) //compile
         .pipe(dest("build/css")); //save on harddisk
 
@@ -10,7 +10,7 @@ function css(done) {
 }
 
 function dev(done) {
-    watch('src/scss/app.scss',css);
+    watch('src/scss/**/*.scss',css);
     done();
 }
 
