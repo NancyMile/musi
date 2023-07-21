@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+@use 'base/mixin' as m;
+
+.video{
+    position: relative;
+
+    .overlay{
+        position: absolute;
+        background: rgb(2,0,36);
+        background: linear-gradient(276deg, rgba(2,0,36,1) 0%, rgba(63,6,75,0.8827906162464986) 58%, rgba(165,3,255,0.5) 100%);
+        width: 100%;
+        height: 100%;
+    }
+
+    video{
+        width: 100%;
+        display: block;
+    }
+}
