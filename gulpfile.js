@@ -6,6 +6,7 @@ const plumber = require("gulp-plumber");
 const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 function css(done) {
     src('src/scss/**/*.scss') //find sass file
@@ -45,7 +46,20 @@ function images(done) {
     done();
 }
 
+function versionAvif( done ){
+    const options = {
+        quality: 50
+    }
+
+    src('src/img/**/*.{jpg,png}')
+        .pipe(avif(options))
+        .pipe(dest("build/img"))
+
+    done();
+}
+
 exports.css = css;
 exports.images = images;
 exports.versionWebp = versionWebp;
-exports.dev = parallel( images, versionWebp, dev );
+exports.versionAvif = versionAvif;
+exports.dev = parallel( images, versionWebp, versionAvif, dev );
