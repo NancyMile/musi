@@ -32,10 +32,25 @@ function displayImage(id) {
             <img  loading="lazy" width="200" height ="300" src="build/img/grande/${id}.jpg" alt="image gallery" />
         `;
 
+    //create div for image
     const overlay = document.createElement('DIV');
     overlay.appendChild(image);
     overlay.classList.add('overlay');
 
+    //button to close the modal
+    const closeModal = document.createElement('P');
+    closeModal.textContent = 'x';
+    closeModal.classList.add('btn-close');
+    closeModal.onclick = function () {
+        const body = document.querySelector('body');
+        body.classList.remove('fixed-body');
+        overlay.remove();
+    }
+    overlay.appendChild(closeModal);
+
+
+    //append image to html
     const body = document.querySelector('body');
     body.appendChild(overlay);
+    body.classList.add('fixed-body');
 }
