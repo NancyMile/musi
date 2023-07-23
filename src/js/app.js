@@ -36,6 +36,12 @@ function displayImage(id) {
     const overlay = document.createElement('DIV');
     overlay.appendChild(image);
     overlay.classList.add('overlay');
+    overlay.onclick = function () {
+        const body = document.querySelector('body');
+        body.classList.remove('fixed-body');
+        overlay.remove();
+    }
+
 
     //button to close the modal
     const closeModal = document.createElement('P');
