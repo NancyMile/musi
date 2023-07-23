@@ -16,7 +16,26 @@ function createGallery() {
             <source srcset="build/img/thumb/${i}.webp" type="image/webp">
             <img  loading="lazy" width="200" height ="300" src="build/img/thumb/${i}.jpg" alt="image gallery" />
         `;
+        image.onclick = function () {
+            displayImage(i);
+        }
 
         gallery.appendChild(image);
     }
+}
+
+function displayImage(id) {
+    const image = document.createElement('picture');
+        image.innerHTML = `
+            <source srcset="build/img/grande/${id}.avif" type="image/avif">
+            <source srcset="build/img/grande/${id}.webp" type="image/webp">
+            <img  loading="lazy" width="200" height ="300" src="build/img/grande/${id}.jpg" alt="image gallery" />
+        `;
+
+    const overlay = document.createElement('DIV');
+    overlay.appendChild(image);
+    overlay.classList.add('overlay');
+
+    const body = document.querySelector('body');
+    body.appendChild(overlay);
 }
