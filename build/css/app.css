@@ -492,8 +492,7 @@ img {
 }
 .lineup .day {
   text-transform: uppercase;
-  margin-bottom: 5rem;
-  font-weight: 700;
+  margin-bottom: 5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -525,9 +524,27 @@ img {
 .scenarios-container .rock .name-scenary::after {
   background-image: url("../img/icono_rock.png");
 }
+.scenarios-container .calendar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.scenarios-container .calendar li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.scenarios-container .calendar li span {
+  font-weight: 400;
+}
 .scenarios-container .bg-yellow {
   background-color: #fef46d;
 }
+.scenarios-container .bg-yellow li:nth-child(odd) {
+  background-color: #fef03a;
+}
 .scenarios-container .bg-green {
   background-color: #4cb8b3;
+}
+.scenarios-container .bg-green li:nth-child(odd) {
+  background-color: #3b9691;
 }
