@@ -481,3 +481,53 @@ img {
   color: #f53756;
   font-weight: 700;
 }
+
+.lineup {
+  background-color: #f53756;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #fff;
+}
+.lineup .day {
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .scenarios-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.scenarios-container p {
+  color: #000;
+}
+.scenarios-container .scenario {
+  padding-top: 2rem;
+}
+.scenarios-container .scenario .name-scenary:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+.scenarios-container .edm .name-scenary::after {
+  background-image: url("../img/icono_edm.png");
+}
+.scenarios-container .rock .name-scenary::after {
+  background-image: url("../img/icono_rock.png");
+}
+.scenarios-container .bg-yellow {
+  background-color: #fef46d;
+}
+.scenarios-container .bg-green {
+  background-color: #4cb8b3;
+}
