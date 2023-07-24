@@ -2,7 +2,7 @@
 @use 'base/mixin' as m;
 
 .tickets{
-    padding-top: 5rem;
+    padding: 5rem;
     background-color: v.$green;
     h3 {
         text-align: center;
