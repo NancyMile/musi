@@ -11,14 +11,19 @@ function initApp() {
 function fixedNav() {
     const bar = document.querySelector('.header');
     const aboutFestival = document.querySelector('.about-festival')
+    const body = document.querySelector('body');
+
+
     window.addEventListener('scroll', function () {
         //console.log(aboutFestival.getBoundingClientRect());
         if (aboutFestival.getBoundingClientRect().bottom < 0) {
             //console.log('pased from element');
             bar.classList.add('fixed-nav')
+            body.classList.add('body-scroll')
         } else {
             //console.log(' element  no reached yet')
             bar.classList.remove('fixed-nav')
+            body.classList.remove('body-scroll')
         }
     })
 }
