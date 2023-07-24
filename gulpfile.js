@@ -13,6 +13,9 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
+//JS
+const terser = require('gulp-terser-js');
+
 function css(done) {
     src('src/scss/**/*.scss') //find sass file
         .pipe(sourcemaps.init()) //va  guardando la referencia
@@ -63,6 +66,9 @@ function versionAvif( done ){
 
  function javascript(done){
      src('src/js/**/*.js')
+         .pipe(sourcemaps.init())
+         .pipe(terser())
+         .pipe(sourcemaps.write('.'))
          .pipe(dest('build/js'));
      done();
  }
